@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+\usepackage[font=bf]{caption} 
+\usepackage[utf8]{inputenc}					
+\usepackage[danish]{babel}					% Dokumentets sprog
+\usepackage[T1]{fontenc}		
+\usepackage{amsmath,amsthm,amssymb,amsfonts,bm}
+\usepackage{ragged2e,anyfontsize}
+\usepackage{etex}
+\usepackage[titletoc]{appendix}
+\usepackage{thmtools}
+\usepackage[makeroom]{cancel}
+\usepackage{placeins}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage[danish]{varioref}
+\usepackage{dirtytalk}
+\usepackage{blindtext}
+\usepackage{etex}
+\usepackage{graphicx}
+\usepackage{flafter}
+\usepackage{float}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{mdframed}
+\usepackage{enumitem}
+\usepackage{a4wide}
+\usepackage{parskip}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{colortbl}
+\usepackage{textcomp}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{algorithm}
+\usepackage{tasks}
+\usepackage{commath}
+\usepackage{calc}
+\usepackage{pdfpages}
+\usepackage{xfrac}
+\usepackage{enumitem}
+\usepackage{varwidth}
+\usepackage{tasks}
+\usepackage[noend]{algpseudocode}
+\usepackage{tikz}
+\usetikzlibrary{angles}
+\usetikzlibrary{quotes}
+\usetikzlibrary{babel}
+
+\usepackage[titletoc]{appendix}
+\usepackage[danish]{babel} % For Danish writing.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, margin=4cm]{geometry} % margins.
+
+\usepackage{float}
+
+% Adds support for full page background picture
+\usepackage[contents={},color=gray]{background}
+\usepackage{setspace}
+\usepackage{rotating}
+\usepackage{caption}
+
+\usepackage{xcolor}
+\definecolor{aaublue}{RGB}{33,26,82}% dark blue
+\definecolor{bg}{HTML}{f2f2f2}
+
+%\usepackage[pdftex]{graphicx} % For pictures.
+
+\usepackage{amssymb,amsmath,amsthm,amsfonts} % Math.
+
+% Styling of Code Blocks
+\usepackage{minted}
+\usemintedstyle{emacs}
+\setminted{
+    frame=leftline,
+    framesep=2mm,
+    baselinestretch=1.2,
+    fontsize=\footnotesize,
+    bgcolor=bg,
+    linenos=true,
+    tabsize=1,
+    obeytabs=true,
+    mathescape=true,
+    breaklines
+}
+
+\usepackage{hyperref}
+
+
+\usepackage{lastpage} %Bruge til at få sidetal fra sidste side
+\usepackage{calc} % Reset counter after title page.
+
+% Bibliografi
+\usepackage{csquotes} 
+\usepackage[backend=biber, sorting=none]{biblatex}
+\bibliography{bib.bib}
+\usepackage[nottoc,numbib]{tocbibind}
+
+% Noter i dokument
+\setlength{\marginparwidth}{3.5cm}
+\usepackage{todonotes}
+\linespread{1.25}
+
+% Ændr titel på indholdfortegnelse
+\addto\captionsdanish{\renewcommand{\contentsname}{Indholdsfortegnelse}}
+
+% the numbers mason, what do they mean?
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+%Sidehoved
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\fancyhf{}
+%\renewcommand{\chaptermark}[1]{ \markboth{\thechapter.\ #1}{}}
+\fancyheadoffset{0pt}
+\lhead{\nouppercase \rightmark}
+\rhead{Aalborg Universitet}
+%\renewcommand{\chaptermark}[1]
+%        {\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]
+        {\markright{\thesection\ #1}}
+\lfoot[\fancyplain{}{\bfseries\thepage}]
+    {\fancyplain{}{}}
+\rfoot[\fancyplain{}{}]%
+    {\fancyplain{}{\bfseries\thepage}}
+\patchcmd{\chapter}{plain}{fancy}{}{}
